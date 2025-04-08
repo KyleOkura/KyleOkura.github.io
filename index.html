@@ -17,6 +17,14 @@
 <body>
   <header>
     <h1>Hi, I'm Kyle Okura!</h1>
+    <script>
+        fetch("nav.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("nav").innerHTML = data;
+          });
+      </script>
+      
     <div id="nav"></div>
   </header>
 
