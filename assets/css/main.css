@@ -2453,3 +2453,7 @@ input, select, textarea {
 		margin: 0 auto;
 		display: block;
 	}
+
+	.intro-text {
+		padding-left: 2rem;
+	}
