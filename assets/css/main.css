@@ -2490,5 +2490,27 @@ input, select, textarea {
 	.footer-bar .icon:hover {
 		color: #2e95c9;
 	}
+
+
+	.button.download {
+		background-color: #0077ff;
+		color: white;
+		padding: 0.75em 1.5em;
+		font-size: 1rem;
+		font-weight: 500;
+		border: none;
+		border-radius: 6px;
+		box-shadow: 0 4px 12px rgba(0, 119, 255, 0.25);
+		transition: all 0.2s ease;
+		text-decoration: none;
+		display: inline-block;
+	  }
+	  
+	  .button.download:hover {
+		background-color: #005dd1;
+		box-shadow: 0 6px 16px rgba(0, 93, 209, 0.35);
+		transform: translateY(-2px);
+	  }
+	  
 	  
 	  
