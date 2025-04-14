@@ -2493,7 +2493,7 @@ input, select, textarea {
 
 
 	.button.download {
-		background-color: #0077ff !important;
+		background-color: #3489eb !important;
 		color: white !important;
 		padding: 0.75em 1.5em !important;
 		font-size: 1rem !important;
@@ -2510,6 +2510,42 @@ input, select, textarea {
 		background-color: #005dd1 !important;
 		box-shadow: 0 6px 16px rgba(0, 93, 209, 0.35) !important;
 		transform: translateY(-2px) !important;
+	  }
+	  
+
+	  #resume.wrapper {
+		padding-bottom: 1em !important; /* reduce bottom padding */
+	  }
+	  
+	  #resume .inner {
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+	  }
+	  
+	  #resume img {
+		margin-bottom: 0.5em !important;
+	  }
+	  
+	  #resume .button.download {
+		margin-bottom: 0 !important;
+	  }
+	  
+
+	  #resume.wrapper {
+		padding-bottom: 1em !important; /* reduce bottom padding */
+	  }
+	  
+	  #resume .inner {
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+	  }
+	  
+	  #resume img {
+		margin-bottom: 0.5em !important;
+	  }
+	  
+	  #resume .button.download {
+		margin-bottom: 0 !important;
 	  }
 	  
 	  
