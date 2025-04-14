@@ -2493,23 +2493,23 @@ input, select, textarea {
 
 
 	.button.download {
-		background-color: #0077ff;
-		color: white;
-		padding: 0.75em 1.5em;
-		font-size: 1rem;
-		font-weight: 500;
-		border: none;
-		border-radius: 6px;
-		box-shadow: 0 4px 12px rgba(0, 119, 255, 0.25);
-		transition: all 0.2s ease;
-		text-decoration: none;
-		display: inline-block;
+		background-color: #0077ff !important;
+		color: white !important;
+		padding: 0.75em 1.5em !important;
+		font-size: 1rem !important;
+		font-weight: 500 !important;
+		border: none !important;
+		border-radius: 6px !important;
+		box-shadow: 0 4px 12px rgba(0, 119, 255, 0.25) !important;
+		transition: all 0.2s ease !important;
+		text-decoration: none !important;
+		display: inline-block !important;
 	  }
 	  
 	  .button.download:hover {
-		background-color: #005dd1;
-		box-shadow: 0 6px 16px rgba(0, 93, 209, 0.35);
-		transform: translateY(-2px);
+		background-color: #005dd1 !important;
+		box-shadow: 0 6px 16px rgba(0, 93, 209, 0.35) !important;
+		transform: translateY(-2px) !important;
 	  }
 	  
 	  
