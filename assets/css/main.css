@@ -2459,7 +2459,7 @@ input, select, textarea {
 	}
 
 	#footer.wrapper {
-		padding: 1em 0; /* Shrinks the vertical space */
+		padding: 1em 0 !important;
 		text-align: center;
 	}
 	  
@@ -2471,7 +2471,7 @@ input, select, textarea {
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		flex-wrap: wrap; /* Wrap if needed on small screens */
+		flex-wrap: wrap;
 	}
 	  
 	.footer-bar li {
