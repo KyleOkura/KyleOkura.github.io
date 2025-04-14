@@ -72,6 +72,7 @@ input, select, textarea {
 	appearance: none;
 }
 
+
 /* Basic */
 
 	html {
@@ -2442,4 +2443,13 @@ input, select, textarea {
 						margin-top: 0;
 					}
 
+	}
+
+
+	.profile-image img{
+		max-width: 300px;
+		border-radius: 15px;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		margin: 0 auto;
+		display: block;
 	}
