@@ -29,14 +29,36 @@
   </section>
 
   <section id="work" class="wrapper style2 spotlights" style="margin-bottom:0px">
-    <section>
-      <div class="content">
-        <div class="inner">
-          <h2>Examining Judicial Racial Bias</h2>
-          <p>Performed EDA and built linear regression models to predict outcomes and evaluate error trends. Proposed improvements based on findings.</p>
+    <section class="wrapper style2 fade-up">
+      <div class="inner">
+        <div class="row aln-middle">
+
+          <div class="col-7 col-12-medium" style="padding-left: 4rem;">
+            <h3>Examining Judicial Racial Bias</h3>
+            <p>
+              Investigated fairness in binary classification by analyzing the impact of demographic features on model predictions. 
+              A logistic regression model was trained to predict risk outcomes, and the influence of each group was assessed through 
+              the learned coefficients.
+            </p>
+            <p>
+              The chart shows the model’s coefficient values for each demographic category. 
+              A significantly higher coefficient for one group indicates potential bias, suggesting the model may associate 
+              that group with a higher likelihood of the predicted outcome. 
+              This analysis highlights the importance of auditing models for fairness and accountability.
+            </p>
+            <a href="https://github.com/KyleOkura/CSCI3202GameTreeProject" class="button download" download>GitHub Code</a>
+          </div>
+
+          <div class="col-5 col-12-medium" style="text-align: center;">
+            <img src="images/evbetting.png" alt="Bets Chart"
+                 style="width: 100%; max-width: 750px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+          </div>
+    
         </div>
       </div>
     </section>
+
+
 
     <section class="wrapper style2 fade-up">
       <div class="inner">
