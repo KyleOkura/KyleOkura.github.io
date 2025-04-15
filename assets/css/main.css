@@ -2514,7 +2514,7 @@ input, select, textarea {
 	  
 
 	  #resume.wrapper {
-		padding-bottom: 1em !important; /* reduce bottom padding */
+		padding-bottom: 1em !important;
 	  }
 	  
 	  #resume .inner {
@@ -2532,7 +2532,7 @@ input, select, textarea {
 	  
 
 	  #resume.wrapper {
-		padding-bottom: 1em !important; /* reduce bottom padding */
+		padding-bottom: 1em !important;
 	  }
 	  
 	  #resume .inner {
