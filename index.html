@@ -4,187 +4,224 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kyle Okura | Portfolio</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
 <body>
-  <section id="intro" class="wrapper style1 fullscreen fade-up">
-    <div class="row aln-middle">
-      <div class="col-8 col-12-medium intro-text" style="padding-left: 75px">
-        <h1>Hello! I'm <strong>Kyle Okura</strong></h1>
-        <p>
-          A Computer Science student at the University of Colorado Boulder with a minor in Business. I created this website as a hub to showcase the projects I’ve worked on, share my resume, and provide easy access to my professional links.
-          <br>
-          Through both coursework and personal exploration, I’ve developed a strong foundation in a variety of programming languages, including Python, SQL, HTML, CSS, C, and C++.
-          <br>
-          I enjoy working with data and statistics, and am especially interested in exploring the field of data science further. I’m excited by the possibilities of turning data into insights and leveraging that to solve real-world problems. 
-        </p>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <button class="nav-brand" onclick="switchTab('home')">Kyle Okura</button>
+      <div class="nav-links" id="navLinks">
+        <button class="nav-btn active" data-tab="home"     onclick="switchTab('home')">Home</button>
+        <button class="nav-btn"        data-tab="projects" onclick="switchTab('projects')">Projects</button>
+        <button class="nav-btn"        data-tab="resume"   onclick="switchTab('resume')">Resume</button>
       </div>
-      <div class="col-4 col-12-medium">
-        <span class="image fit profile-image">
-          <img src="images/thumbnail.png" alt="Profile picture of Kyle Okura"/>
-        </span>
-      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </section>
+  </nav>
 
-  <section id="work">
-    <section class="wrapper style2 fade-up">
-      <div class="inner">
-        <div class="row aln-middle">
+  <!-- Main Content -->
+  <main class="main-content">
 
-          <div class="col-8 col-12-medium" style="padding-left: 4rem;">
-            <h3>Examining Judicial Racial Bias</h3>
-            <p>
-              Investigated fairness in binary classification by analyzing the impact of demographic features on model predictions. 
-              A logistic regression model was trained to predict risk outcomes, and the influence of each group was assessed through 
-              the learned coefficients.
+    <!-- ===== HOME ===== -->
+    <section id="home" class="tab active">
+      <div class="hero">
+        <div class="hero-inner">
+          <img src="images/thumbnail.png" alt="Kyle Okura" class="hero-photo">
+          <div class="hero-text">
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1 class="hero-name">Kyle Okura</h1>
+            <p class="hero-title">Computer Science Student &amp; Aspiring Data Scientist</p>
+            <p class="hero-bio">
+              A Computer Science student at the University of Colorado Boulder with a minor in Business.
+              I'm passionate about data science, machine learning, and turning raw data into meaningful insights.
+              With experience in Python, SQL, HTML, CSS, C, and C++, I enjoy building projects that tackle real-world problems.
             </p>
-            <p>
-              The chart shows the model’s coefficient values for each demographic category. 
-              A significantly higher coefficient for one group indicates potential bias, suggesting the model may associate 
-              that group with a higher likelihood of the predicted outcome. 
-            </p>
-            <a href="https://github.com/KyleOkura/RacialBiasProject" class="button download" download>GitHub Code</a>
-          </div>
-
-          <div class="col-4 col-12-medium" style="text-align: center;">
-            <img src="images/nn2.png" alt="Bets Chart"
-                 style="width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-          </div>
-    
-        </div>
-      </div>
-    </section>
-
-
-
-    <section class="wrapper style2 fade-up">
-      <div class="inner">
-        <div class="row aln-middle">
-          
-          <div class="col-4 col-12-medium" style="text-align: center;">
-            <img src="images/mancala.png" alt="Alpha-Beta Depth Chart"
-                 style="width: 100%; max-width: 500px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-          </div>
-
-          <div class="col-8 col-12-medium" style="padding-right: 3.5rem;">
-            <h3>Mancala AI Solver</h3>
-            <p>
-              Built an AI agent to play <em>Mancala</em> using game tree search algorithms.
-              The program supports both <strong>Minimax</strong> and <strong>Alpha-Beta Pruning</strong> 
-              to evaluate optimal moves. It was tested against a random-move opponent across multiple tree depths.
-            </p>
-            <p>
-              The chart shows Alpha-Beta's performance over 100 games per depth level, highlighting its ability 
-              to improve with deeper lookahead.
-            </p>
-            <a href="https://github.com/KyleOkura/CSCI3202GameTreeProject" class="button download" download>GitHub Code</a>
-          </div>
-    
-        </div>
-      </div>
-    </section>
-    
-
-    <section class="wrapper style2 fade-up">
-      <div class="inner">
-        <div class="row aln-middle">
-
-          <div class="col-7 col-12-medium" style="padding-left: 4rem;">
-            <h3>Positive EV Sports Betting</h3>
-            <p>
-              Developed a value-betting model that compares live odds from local sportsbooks to sharp sportsbook lines to identify +EV (positive expected value) opportunities. 
-              The system uses real-time data from TheOddsAPI and calculates optimal bet sizing using the Kelly Criterion to maximize long-term profit.
-              All bets are logged in a database and can be updated with a simple web interface for viewing current and past bets. 
-            </p>
-            <p>
-              Here is a screenshot from the web interface, showing some of the settled bets.
-            </p>
-            <a href="https://github.com/KyleOkura/EVBetting" class="button download" download>GitHub Code</a>
-          </div>
-
-          <div class="col-5 col-12-medium" style="text-align: center;">
-            <img src="images/evbetting.png" alt="Bets Chart"
-                 style="width: 100%; max-width: 750px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-          </div>
-    
-        </div>
-      </div>
-    </section>
-
-
-
-
-    <section class="wrapper style2 fade-up">
-      <div class="inner">
-        <div class="row aln-middle">
-          <div class="col-4 col-12-medium" style="text-align: center;">
-            <img src="images/datasceince2.png" alt="Residuals Chart"
-                 style="width: 100%; max-width: 500px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-          </div>
-
-          <div class="col-8 col-12-medium" style="padding-right: 3.5rem;">
-            <h2>Predictive Modeling & Data Analysis on Housing Dataset</h2>
-            <p>Built a regression model to predict log-transformed home sale prices using housing features like square footage, 
-              location, and condition. The project involved data preprocessing, feature selection, and model tuning using validation 
-              data to ensure accuracy and generalization.
-            </p>
-            <p>
-              The chart shows residuals from one of the models, revealing patterns of model bias—underpredicting high-value homes 
-              and overpredicting low-value ones. These insights helped refine the model and improve predictive performance.
-            </p>
-            <a href="https://github.com/KyleOkura/CSCI3022DataScienceProject" class="button download" download>GitHub Code</a>
+            <div class="hero-links">
+              <a href="https://github.com/KyleOkura" class="social-btn github" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/kyleokura/" class="social-btn linkedin" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="mailto:kyle.okura@yahoo.com" class="social-btn email">
+                <i class="fas fa-envelope"></i> Email
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  </section>
 
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="tab">
+      <div class="section-container">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <p>A selection of projects I've built, ranging from AI and machine learning to data analysis and web development.</p>
+        </div>
 
+        <div class="projects-grid">
 
-  <section id="resume" class="wrapper style3 fade-up" style="padding-top: 2em; margin-bottom: 0px;">
-    <div class="inner">
-      <h2 style="margin-bottom: 1em;">My Resume</h2>
-  
-      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <img src="images/resume_pic.jpg" alt="Resume of Kyle Okura"
-          style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 1em;" />
-  
-        <a href="assets/resume.pdf" class="button download" download>Download Resume</a>
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="images/nn2.png" alt="Coefficient chart from Judicial Racial Bias project">
+            </div>
+            <div class="project-body">
+              <h3>Examining Judicial Racial Bias</h3>
+              <p>
+                Investigated fairness in binary classification by analyzing the impact of demographic features
+                on model predictions. A logistic regression model was trained to predict risk outcomes, and
+                learned coefficients were used to identify potential group-level bias.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Logistic Regression</span>
+                <span class="tag">Fairness AI</span>
+              </div>
+              <a href="https://github.com/KyleOkura/RacialBiasProject" class="project-btn" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="images/mancala.png" alt="Alpha-Beta depth performance chart">
+            </div>
+            <div class="project-body">
+              <h3>Mancala AI Solver</h3>
+              <p>
+                Built an AI agent to play Mancala using game tree search algorithms, supporting both
+                Minimax and Alpha-Beta Pruning to evaluate optimal moves. Tested against a random-move
+                opponent across multiple search depths to benchmark performance.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Minimax</span>
+                <span class="tag">Alpha-Beta Pruning</span>
+              </div>
+              <a href="https://github.com/KyleOkura/CSCI3202GameTreeProject" class="project-btn" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="images/evbetting.png" alt="Sports betting web interface screenshot">
+            </div>
+            <div class="project-body">
+              <h3>Positive EV Sports Betting</h3>
+              <p>
+                Developed a value-betting model that compares live sportsbook odds to sharp lines to
+                find +EV opportunities. Uses real-time data from TheOddsAPI, Kelly Criterion bet sizing,
+                and a web interface for logging and reviewing bets.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">REST API</span>
+                <span class="tag">Kelly Criterion</span>
+              </div>
+              <a href="https://github.com/KyleOkura/EVBetting" class="project-btn" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="images/datasceince2.png" alt="Residuals chart from housing dataset project">
+            </div>
+            <div class="project-body">
+              <h3>Predictive Modeling on Housing Dataset</h3>
+              <p>
+                Built a regression model to predict log-transformed home sale prices using features like
+                square footage, location, and condition. Involved data preprocessing, feature selection,
+                model tuning, and residual analysis to improve predictive accuracy.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Regression</span>
+                <span class="tag">Data Science</span>
+              </div>
+              <a href="https://github.com/KyleOkura/CSCI3022DataScienceProject" class="project-btn" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </section>
-  
-  
+    </section>
 
-
-  <footer id="footer" class="wrapper style1-alt" style="margin-top: 0px;">
-    <div class="inner">
-      <ul class="footer-bar">
-        <li>&copy; Kyle Okura</li>
-        <li>
-          <a href="https://github.com/KyleOkura" class="icon brands fa-github" target="_blank" style="margin-right: 10px;">
-            <span class="label">GitHub</span>
+    <!-- ===== RESUME ===== -->
+    <section id="resume" class="tab">
+      <div class="section-container">
+        <div class="section-header">
+          <h2>Resume</h2>
+          <p>View my resume below or download a copy.</p>
+        </div>
+        <div class="resume-actions">
+          <a href="assets/resume.pdf" class="download-btn" download>
+            <i class="fas fa-download"></i> Download PDF
           </a>
-          <a href="https://www.linkedin.com/in/kyleokura/" class="icon brands fa-linkedin-in" target="_blank" style="margin-right: 10px;">
-            <span class="label">LinkedIn</span>
-          </a>
-          <a href="mailto:kyle.okura@yahoo.com" class="icon solid fa-envelope">
-            <span class="label">Email</span>
-          </a>
-        </li>
-      </ul>
+        </div>
+        <div class="resume-preview">
+          <img src="images/resume_pic.jpg" alt="Kyle Okura Resume">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Kyle Okura</span>
+      <div class="footer-links">
+        <a href="https://github.com/KyleOkura" target="_blank" rel="noopener" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kyleokura/" target="_blank" rel="noopener" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:kyle.okura@yahoo.com" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
     </div>
   </footer>
-  
 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrollex.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      document.querySelector('.nav-btn[data-tab="' + tabId + '"]').classList.add('active');
+      document.getElementById('navLinks').classList.remove('open');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      history.replaceState(null, '', '#' + tabId);
+    }
+
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    // Restore tab from URL hash on load
+    (function () {
+      var hash = window.location.hash.slice(1);
+      if (hash === 'projects' || hash === 'resume') switchTab(hash);
+    })();
+  </script>
+
 </body>
 </html>
