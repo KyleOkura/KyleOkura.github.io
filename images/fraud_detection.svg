@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="135deg" x2="225deg" gradientUnits="userSpaceOnUse"
+      x1="100" y1="120" x2="430" y2="330">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="50%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="rgba(99,102,241,0.4)"/>
+    </filter>
+    <filter id="shieldShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="14" flood-color="rgba(16,185,129,0.4)"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Subtle hex/circuit background pattern -->
+  <g opacity="0.04" stroke="#6366f1" stroke-width="1" fill="none">
+    <polygon points="80,40 110,57 110,91 80,108 50,91 50,57"/>
+    <polygon points="140,40 170,57 170,91 140,108 110,91 110,57"/>
+    <polygon points="200,40 230,57 230,91 200,108 170,91 170,57"/>
+    <polygon points="710,320 740,337 740,371 710,388 680,371 680,337"/>
+    <polygon points="750,280 780,297 780,331 750,348 720,331 720,297"/>
+    <polygon points="660,360 690,377 690,411 660,428 630,411 630,377"/>
+  </g>
+
+  <!-- Floating binary strings (very subtle) -->
+  <g fill="#818cf8" font-family="monospace" font-size="10" opacity="0.08">
+    <text x="20" y="50">01101001 10110100</text>
+    <text x="580" y="30">11001010 01110011</text>
+    <text x="40" y="410">10010110 01001101</text>
+    <text x="640" y="425">01110010 11010001</text>
+    <text x="20" y="240">10101010</text>
+    <text x="720" y="160">01010101</text>
+  </g>
+
+  <!-- Glow orbs in background -->
+  <circle cx="250" cy="225" r="160" fill="rgba(99,102,241,0.04)"/>
+  <circle cx="580" cy="200" r="120" fill="rgba(16,185,129,0.04)"/>
+
+  <!-- Credit card (tilted left-center) -->
+  <g transform="translate(88, 95) rotate(-7, 175, 130)" filter="url(#shadow)">
+    <!-- Card body -->
+    <rect width="350" height="215" rx="18" fill="url(#cardGrad)"/>
+    <!-- Card shine overlay -->
+    <rect width="350" height="215" rx="18" fill="url(#cardShine)" opacity="0.06"/>
+    <linearGradient id="cardShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.15"/>
+      <stop offset="60%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Chip -->
+    <rect x="28" y="62" width="52" height="42" rx="7" fill="#f59e0b"/>
+    <rect x="36" y="70" width="36" height="26" rx="3" fill="#d97706" opacity="0.7"/>
+    <line x1="36" y1="83" x2="72" y2="83" stroke="#b45309" stroke-width="1" opacity="0.5"/>
+    <line x1="54" y1="70" x2="54" y2="96" stroke="#b45309" stroke-width="1" opacity="0.5"/>
+    <!-- Contactless symbol -->
+    <path d="M95,72 Q100,83 95,94" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M102,66 Q110,83 102,100" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M109,60 Q120,83 109,106" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Card number -->
+    <text x="28" y="155" fill="rgba(255,255,255,0.85)" font-family="monospace" font-size="15" letter-spacing="3.5">4532 ····  ····  7821</text>
+    <!-- Holder & expiry -->
+    <text x="28" y="185" fill="rgba(255,255,255,0.6)" font-family="Arial" font-size="10" letter-spacing="1">CARDHOLDER NAME</text>
+    <text x="285" y="185" fill="rgba(255,255,255,0.6)" font-family="Arial" font-size="10">12/27</text>
+    <!-- Network logo circles -->
+    <circle cx="302" cy="45" r="20" fill="rgba(239,68,68,0.8)"/>
+    <circle cx="322" cy="45" r="20" fill="rgba(251,146,60,0.7)"/>
+    <!-- Holographic shimmer lines -->
+    <line x1="0" y1="215" x2="350" y2="0" stroke="rgba(255,255,255,0.04)" stroke-width="40"/>
+  </g>
+
+  <!-- Alert badge on card -->
+  <g transform="translate(310, 215)" filter="url(#glow)">
+    <circle r="24" fill="#ef4444"/>
+    <text x="0" y="8" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">!</text>
+  </g>
+
+  <!-- Connection line from card to shield -->
+  <line x1="435" y1="220" x2="540" y2="220" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.6"/>
+  <circle cx="455" cy="220" r="3" fill="#818cf8" opacity="0.8"/>
+  <circle cx="475" cy="220" r="3" fill="#818cf8" opacity="0.8"/>
+  <circle cx="495" cy="220" r="3" fill="#818cf8" opacity="0.8"/>
+  <circle cx="515" cy="220" r="3" fill="#818cf8" opacity="0.8"/>
+
+  <!-- Shield (right side) -->
+  <g transform="translate(540, 110)" filter="url(#shieldShadow)">
+    <!-- Shield path -->
+    <path d="M80,0 L158,32 L158,118 Q158,182 80,210 Q2,182 2,118 L2,32 Z" fill="url(#shieldGrad)"/>
+    <!-- Inner shield highlight -->
+    <path d="M80,12 L146,40 L146,118 Q146,170 80,196 Q14,170 14,118 L14,40 Z" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+    <!-- Checkmark -->
+    <polyline points="36,108 64,136 124,76" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- SECURE label -->
+    <text x="80" y="238" text-anchor="middle" fill="#34d399" font-family="Arial" font-size="12" font-weight="700" letter-spacing="2">SECURE</text>
+  </g>
+
+  <!-- Label at top -->
+  <text x="400" y="42" text-anchor="middle" fill="rgba(148,163,184,0.5)" font-family="Arial" font-size="11" letter-spacing="3">CREDIT CARD FRAUD DETECTION</text>
+
+  <!-- Neural network nodes (decorative bottom) -->
+  <g opacity="0.25">
+    <!-- Layer 1 -->
+    <circle cx="70" cy="360" r="10" fill="#6366f1" stroke="#818cf8" stroke-width="1.5"/>
+    <circle cx="70" cy="390" r="10" fill="#6366f1" stroke="#818cf8" stroke-width="1.5"/>
+    <circle cx="70" cy="420" r="10" fill="#6366f1" stroke="#818cf8" stroke-width="1.5"/>
+    <!-- Layer 2 -->
+    <circle cx="140" cy="348" r="10" fill="#8b5cf6" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="140" cy="375" r="10" fill="#8b5cf6" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="140" cy="402" r="10" fill="#8b5cf6" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="140" cy="430" r="10" fill="#8b5cf6" stroke="#a78bfa" stroke-width="1.5"/>
+    <!-- Layer 3 -->
+    <circle cx="210" cy="360" r="10" fill="#7c3aed" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="210" cy="390" r="10" fill="#7c3aed" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="210" cy="420" r="10" fill="#7c3aed" stroke="#a78bfa" stroke-width="1.5"/>
+    <!-- Output -->
+    <circle cx="280" cy="390" r="12" fill="#10b981" stroke="#34d399" stroke-width="1.5"/>
+    <!-- Connections -->
+    <line x1="80" y1="360" x2="130" y2="348" stroke="#818cf8" stroke-width="0.8"/>
+    <line x1="80" y1="360" x2="130" y2="375" stroke="#818cf8" stroke-width="0.8"/>
+    <line x1="80" y1="390" x2="130" y2="375" stroke="#818cf8" stroke-width="0.8"/>
+    <line x1="80" y1="390" x2="130" y2="402" stroke="#818cf8" stroke-width="0.8"/>
+    <line x1="80" y1="420" x2="130" y2="402" stroke="#818cf8" stroke-width="0.8"/>
+    <line x1="80" y1="420" x2="130" y2="430" stroke="#818cf8" stroke-width="0.8"/>
+    <line x1="150" y1="348" x2="200" y2="360" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="150" y1="375" x2="200" y2="360" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="150" y1="375" x2="200" y2="390" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="150" y1="402" x2="200" y2="390" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="150" y1="402" x2="200" y2="420" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="150" y1="430" x2="200" y2="420" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="220" y1="360" x2="268" y2="390" stroke="#34d399" stroke-width="0.8"/>
+    <line x1="220" y1="390" x2="268" y2="390" stroke="#34d399" stroke-width="0.8"/>
+    <line x1="220" y1="420" x2="268" y2="390" stroke="#34d399" stroke-width="0.8"/>
+    <!-- Output label -->
+    <text x="296" y="386" fill="#34d399" font-family="Arial" font-size="9" font-weight="700">LEGIT</text>
+    <text x="296" y="398" fill="#34d399" font-family="Arial" font-size="9">/ FRAUD</text>
+  </g>
+
+  <!-- Transaction stream (right side decorative) -->
+  <g opacity="0.35" font-family="monospace" font-size="9" fill="#64748b">
+    <text x="660" y="340">TXN #48291 · $42.99 ✓</text>
+    <text x="660" y="358">TXN #48292 · $1,204 ⚠</text>
+    <text x="660" y="376">TXN #48293 · $8.50  ✓</text>
+    <text x="660" y="394">TXN #48294 · $699  ✓</text>
+    <text x="660" y="412">TXN #48295 · $3,800 🚫</text>
+    <text x="660" y="430">TXN #48296 · $22.00 ✓</text>
+  </g>
+</svg>
