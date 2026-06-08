@@ -72,21 +72,22 @@
 
           <div class="project-card">
             <div class="project-img-wrap">
-              <img src="images/nn2.png" alt="Coefficient chart from Judicial Racial Bias project">
+              <img src="images/nn.png" alt="Neural network performance chart for fraud detection">
             </div>
             <div class="project-body">
-              <h3>Examining Judicial Racial Bias</h3>
+              <h3>Credit Card Fraud Detection</h3>
               <p>
-                Investigated fairness in binary classification by analyzing the impact of demographic features
-                on model predictions. A logistic regression model was trained to predict risk outcomes, and
-                learned coefficients were used to identify potential group-level bias.
+                Trained a Multi-Layer Perceptron (MLP) on 284,807 real-world credit card transactions to
+                classify fraud. Tackled extreme class imbalance using stratified splitting, weighted loss
+                functions, and threshold tuning, achieving a 0.9789 ROC-AUC and 0.82 Fraud F1-score.
               </p>
               <div class="project-tags">
                 <span class="tag">Python</span>
-                <span class="tag">Logistic Regression</span>
-                <span class="tag">Fairness AI</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">scikit-learn</span>
+                <span class="tag">Neural Networks</span>
               </div>
-              <a href="https://github.com/KyleOkura/RacialBiasProject" class="project-btn" target="_blank" rel="noopener">
+              <a href="https://github.com/KyleOkura/FraudDetection" class="project-btn" target="_blank" rel="noopener">
                 <i class="fab fa-github"></i> View on GitHub
               </a>
             </div>
@@ -99,39 +100,17 @@
             <div class="project-body">
               <h3>Mancala AI Solver</h3>
               <p>
-                Built an AI agent to play Mancala using game tree search algorithms, supporting both
-                Minimax and Alpha-Beta Pruning to evaluate optimal moves. Tested against a random-move
-                opponent across multiple search depths to benchmark performance.
+                Built an AI agent to play the Kalaha variant of Mancala using Minimax and Alpha-Beta Pruning.
+                Served via a Flask web interface with a CLI benchmark mode. Alpha-Beta achieved a 75–85% win
+                rate against a random opponent across multiple search depths.
               </p>
               <div class="project-tags">
                 <span class="tag">Python</span>
+                <span class="tag">Flask</span>
                 <span class="tag">Minimax</span>
                 <span class="tag">Alpha-Beta Pruning</span>
               </div>
               <a href="https://github.com/KyleOkura/CSCI3202GameTreeProject" class="project-btn" target="_blank" rel="noopener">
-                <i class="fab fa-github"></i> View on GitHub
-              </a>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-img-wrap">
-              <img src="images/evbetting.png" alt="Sports betting web interface screenshot">
-            </div>
-            <div class="project-body">
-              <h3>Positive EV Sports Betting</h3>
-              <p>
-                Developed a value-betting model that compares live sportsbook odds to sharp lines to
-                find +EV opportunities. Uses real-time data from TheOddsAPI, Kelly Criterion bet sizing,
-                and a web interface for logging and reviewing bets.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">SQL</span>
-                <span class="tag">REST API</span>
-                <span class="tag">Kelly Criterion</span>
-              </div>
-              <a href="https://github.com/KyleOkura/EVBetting" class="project-btn" target="_blank" rel="noopener">
                 <i class="fab fa-github"></i> View on GitHub
               </a>
             </div>
@@ -144,16 +123,40 @@
             <div class="project-body">
               <h3>Predictive Modeling on Housing Dataset</h3>
               <p>
-                Built a regression model to predict log-transformed home sale prices using features like
-                square footage, location, and condition. Involved data preprocessing, feature selection,
-                model tuning, and residual analysis to improve predictive accuracy.
+                Built a machine learning pipeline to predict residential property sale prices across Cook
+                County, IL using 500,000+ records and 62 features. Performed feature engineering, linear
+                regression modeling, and fairness analysis to surface property tax assessment inequities.
               </p>
               <div class="project-tags">
                 <span class="tag">Python</span>
+                <span class="tag">scikit-learn</span>
                 <span class="tag">Regression</span>
-                <span class="tag">Data Science</span>
+                <span class="tag">Fairness Analysis</span>
               </div>
               <a href="https://github.com/KyleOkura/CSCI3022DataScienceProject" class="project-btn" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="images/nn2.png" alt="Coefficient chart from Judicial Racial Bias project">
+            </div>
+            <div class="project-body">
+              <h3>Examining Judicial Racial Bias</h3>
+              <p>
+                Analyzed racial bias in the COMPAS recidivism prediction tool used in criminal justice.
+                Trained a logistic regression model on COMPAS data and examined learned coefficients to
+                assess whether demographic features drove disproportionate risk score predictions.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Logistic Regression</span>
+                <span class="tag">COMPAS</span>
+                <span class="tag">Fairness AI</span>
+              </div>
+              <a href="https://github.com/KyleOkura/RacialBiasProject" class="project-btn" target="_blank" rel="noopener">
                 <i class="fab fa-github"></i> View on GitHub
               </a>
             </div>
